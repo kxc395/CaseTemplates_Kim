@@ -1,0 +1,57 @@
+global
+--------------- 
+Investigate the font issue. 
+	I swear. The first thing being loaded from fonts.google.com is: 
+	
+@font-face {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-weight: 200;
+    src: local("Titillium WebThin"), local("TitilliumWeb-Thin"), url("http://fonts.gstatic.com/s/titilliumweb/v3/anMUvcNT0H1YN4FII8wpr3XqdloEk0Ij5qwGW4qO9RM.woff") format("woff");
+}
+
+index.html
+---------
+NPR = network path references NPR (RFC 3986) "//url/" vs. "http://" Doesn't work in IE8 and earlier
+HTML5 is not supported in anything less than ie9
+
+line 16: NPR
+23: NPR CDN reference to jquery lib. 
+	Maybe: !if IE8 <= jquery 2.1
+24: Why defer called? 
+30: NPR
+34: Combine with line 30, 
+	if lt ie9 the NPR will not load right.
+FIXED 83: Fix absolute refrence to logo.
+FIXED 93: Fix absolute reference to search button
+
+139 - 141: compile scripts. 
+	Fix loading order. scripts.js should load last to prevent dependancy errors (scripts has onready it will have lines like $(obj).createdependancy(); )
+145: combine inpage script into scripts.js -> already in scripts.js.
+
+scripts.js
+----------
+Fix naming formality to be either $(obj) or jQuery(obj). 
+combine onready and on load events.
+
+main.css
+----------
+FIXED fix path dependancy: #global-menu-toggle {position:absolute; right:0; text-align:center; top:15px;  cursor:pointer;  font-size:22px;  text-transform:lowercase; background:url(/webdev/t4-templates/HTML/images/cwru-links-list.png)
+Consider dropping the link for the font inside main.css. 
+
+
+images
+---------
+Sprite sheet icon images 
+
+
+WARNINGS
+100% of flexslider.css is not being used.
+84% of main.css is not being used. 
+
+Requests: 
+- Icons on the menu nav. Similiar to the style guide?
+- cwru links on lose focus to close the menu.. This is fixed in the t4 as i wrote that up. I'll investigate with katie.
+- On two column child page layout.. If a menu is on the left see if you can get it to stick like the menu. I think this might be a tall order because the menu will have to jump from a float left to a fixed position on the screen 
+
+
