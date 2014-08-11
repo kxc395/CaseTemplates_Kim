@@ -131,7 +131,7 @@
 			if (IEVersion == 6) {
 				$menu.find('ul').css({
 					lineHeight: 0
-				});
+				});				
 			}
 			if (IEVersion >= 6 && IEVersion <= 8) {
 				$menu.find('ul a, ul span').css({

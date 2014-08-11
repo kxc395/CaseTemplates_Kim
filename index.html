@@ -45,22 +45,18 @@
    }
    
    </style> 
-    
+   <!-- Allow parsing of CSS3 media queries and HTML5 via shimming in script -->
+   <!--[if lt IE 9]> 
+   <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
 </head>
-
 <body id="home">
-
-
-
-
 <!-- GLOBAL HEADER
 //////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////// -->
-
-
 <header>
 <section> 
-
 <div class="cwru-links">
 <ul id="global-menu">
 <li><a href="http://www.admission.case.edu/apply/" target="new">Apply</a></li>
@@ -72,13 +68,9 @@
 </div><!-- .cwru-links -->
 
 <span id="global-menu-toggle">CWRU Links</span>
-
 <a title="Case Western Reserve Logo Home" href="http://case.edu"><img class="logo" src="images/cwru-formal-logo.png" alt="Case Western Reserve Logo"></a>
-
 <div class="site-title"><a href="#">Office of the Provost</a></div> <!-- .site-title -->
-
 <div class="search">
-
           <form action="http://www.google.com/cse"  target="_parent" name="searchForm" >
             <input type="hidden" name="cx" value="006457071044915620037:els_bstqree" />
             <input type="hidden" name="ie" value="UTF-8" />
@@ -110,35 +102,25 @@
  <h1>T4</h1> 
  <h2>Academic + Administrative Department Web Templates</h2>
  <div id="version"></div>
-</hgroup>
-  
+</hgroup>  
 </article>
-
-
-
-
-
 </div><!-- .content -->
 </div><!-- .container -->
 
-
-<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- Jquery 1.9 is the last to support IE8 and lower -->
 <!--[if lt IE 9]>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script>
-    $(function(){
-    	console.warn("Please update to the lastest browser. Running in depreciated mode");
-    });
-    </script>
+    <script src="//code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script>console.warn("Please update to the lastest browser. Running in depreciated mode");</script>
 <![endif]-->
+<!--[if gte IE 9]><!-->
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<!--<![endif]-->
+
 
 <script defer src="/scripts/jquery.flexslider.js"></script>
 <script type="text/javascript" src="/scripts/modernizr.custom.42986.js"></script>
-<!--[if lt IE 9]>
-<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script type="text/javascript" src="/scripts/jquery.dropmenu-1.1.4.js"></script>
+
+<script type="text/javascript" src="/scripts/jquery.dropmenu-1.1.4.1.js"></script>
 <script type="text/javascript" src="/scripts/menu.js"></script>
 <script type="text/javascript" src="/scripts/scripts.js"></script>
 <script type="text/javascript" src="/scripts/jquery.sticky.js"></script>
