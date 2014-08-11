@@ -1,3 +1,5 @@
+var TEMPLATE_VERSION = 0.1;
+
 $(function(){	
 	//if scrolling past 100px down fade in the button that allows the user to scroll back up
 	$(window).scroll(function () {
