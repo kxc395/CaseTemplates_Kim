@@ -1,14 +1,6 @@
 global
 --------------- 
-Investigate the font issue. 
-	I swear. The first thing being loaded from fonts.google.com is: 
-	
-@font-face {
-    font-family: "Titillium Web";
-    font-style: normal;
-    font-weight: 200;
-    src: local("Titillium WebThin"), local("TitilliumWeb-Thin"), url("http://fonts.gstatic.com/s/titilliumweb/v3/anMUvcNT0H1YN4FII8wpr3XqdloEk0Ij5qwGW4qO9RM.woff") format("woff");
-}
+FONT Issue only happens in google chrome 22-36. It doesn't like .woff files. My fix includes loading the fonts locally versus cdn. Changing the fonts.css to be SVG first, then WOFF, then legacy.
 
 index.html
 ---------
