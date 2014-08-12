@@ -102,6 +102,7 @@
  <h1>T4</h1> 
  <h2>Academic + Administrative Department Web Templates</h2>
  <div id="version"></div>
+ <div id="jqversion"></div>
 </hgroup>  
 </article>
 </div><!-- .content -->
@@ -119,7 +120,6 @@
 
 <script defer src="/scripts/jquery.flexslider.js"></script>
 <script type="text/javascript" src="/scripts/modernizr.custom.42986.js"></script>
-
 <script type="text/javascript" src="/scripts/jquery.dropmenu-1.1.4.1.js"></script>
 <script type="text/javascript" src="/scripts/scripts.js"></script>
 <script type="text/javascript" src="/scripts/rave.js"></script>
@@ -129,7 +129,10 @@
 //Just something to output the template version on the homescreen. The version reflects which branch we are working on. 
 $(function(){
 	if(TEMPLATE_VERSION !== undefined)
-		$("#version").html("Version: " + TEMPLATE_VERSION);	
+	{
+		$("#version").html("Version: " + TEMPLATE_VERSION);			
+	}
+	$("#jqversion").html("Running Jquery Version: " + $.fn.jquery);	
 });
 </script>
 
