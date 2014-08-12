@@ -44,6 +44,18 @@ $(function(){
 		e.preventDefault();
 		$('.mobile-nav .dropmenu').slideToggle('fast');
 	});
+	
+	//dropmenu init. 
+	//is this css change necessary?
+	$('.desktop-nav .dropmenu').css('display','block');
+	$('.desktop-nav > ul').dropmenu({
+		effect : 'slide',
+		speed : 'fast',
+		timeout : 0,
+		nbsp : false
+	});
+	//fix this for menu specific. no need to look at ALL li's
+	$('li').has('ul').find('> a').addClass('indicator');
 });
 
 $(window).load(function() {
