@@ -21,14 +21,11 @@
 <link rel="stylesheet" href="/styles/fonts/fonts.css" type="text/css">
 <title>Case Western Reserve University</title>
 
+<!-- Temporary test fix for the fonts. -->
+<link rel="stylesheet" href="/styles/fonts/fonts.css" type="text/css">
 <link rel="stylesheet" href="/styles/main.css" type="text/css" >
-<link rel="stylesheet" href="/styles/flexslider.css" type="text/css" > 
-<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.css" type="text/css" > 
+<link rel="stylesheet" href="/lib/woothemes-FlexSlider-2.2.2/flexslider.css" type="text/css" >
 
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script defer src="/scripts/jquery.flexslider.js"></script>
-<script src="/scripts/modernizr.custom.42986.js"></script>
 
 
        
@@ -294,10 +291,21 @@
 //////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////// -->
 
-<script type="text/javascript" src="/scripts/jquery.dropmenu-1.1.4.js"></script>
-<script type="text/javascript" src="/scripts/jquery.sticky.js"></script>
-<script type="text/javascript" src="/lib/bootstrap/js/bootstrap.js"></script>
-<script type="text/javascript" src="/scripts/menu.js"></script>
+<!-- Jquery 1.9 is the last to support IE8 and lower -->
+<!--[if lt IE 9]>
+    <script src="//code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script>console.warn("Please update to the lastest browser. Running in depreciated mode");</script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<!--<![endif]-->
+
+
+<script type="text/javascript" src="/lib/woothemes-FlexSlider-2.2.2/jquery.flexslider.js"></script>
+<script type="text/javascript" src="/scripts/modernizr.custom.42986.js"></script>
+<script type="text/javascript" src="/scripts/jquery.dropmenu-1.1.4.1.js"></script>
 <script type="text/javascript" src="/scripts/scripts.js"></script>
+<script type="text/javascript" src="/scripts/rave.js"></script>
+<script type="text/javascript" src="/scripts/jquery.sticky.js"></script>
 </body>
 </html>
