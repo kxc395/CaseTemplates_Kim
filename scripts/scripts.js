@@ -59,9 +59,13 @@ $(function(){
 });
 
 $(window).load(function() {
+	//Note in flexslider 2.2 they changed the next and prev handles to be a font < > rather than images.
+	//Note I modified the CSS to be a 20px font rather than the default 40px
 	$('.flexslider').flexslider({
 		animation: "slide",
-		controlsContainer: ".flex-container"
+		controlsContainer: ".flex-container",
+		nextText: "",
+		prevText: ""		
 	});
 	
 	$(".desktop-nav").sticky({ topSpacing: -5 });
