@@ -15,7 +15,7 @@ html, body, address, footer, blockquote, dl, pre, span,  button, del, ins, map, 
 body {background: #f5f5f5; }
 
 /* HTML5 Boilerplate  */
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none; }
 [hidden] { display: none; }
@@ -761,9 +761,10 @@ h2, h3 { page-break-after: avoid; }
 
 /* Bootstrap 3.2 Hack, Introduced in branch 0.1
 	In bootstrap 3.2 the display is set to table which causes the title not to sit on the nav properly.
+	Note we don't have to add the obilgotary content: ""; that is handled in the bootstrap css.	
 */
-.container:before {
-  display: block !important; 
+.bshack:before {
+  	display: block;	
 }
 
 

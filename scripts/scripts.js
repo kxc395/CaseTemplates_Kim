@@ -56,6 +56,7 @@ $(function(){
 	});
 	//fix this for menu specific. no need to look at ALL li's
 	$('li').has('ul').find('> a').addClass('indicator');
+		
 });
 
 $(window).load(function() {
