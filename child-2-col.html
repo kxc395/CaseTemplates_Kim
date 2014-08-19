@@ -3,53 +3,21 @@
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
- <meta http-equiv="x-ua-compatible" content="IE=8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=""/>
-<meta name="keywords" content="Case Western Reserve University" />
-<link rel="apple-touch-icon-precomposed" media="screen and (resolution: 326dpi)" href="apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon-precomposed" media="screen and (resolution: 132dpi)" href="apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon-precomposed" media="screen and (resolution: 163dpi)" href="apple-touch-icon.png" />
-<!-- 
-<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600,600italic,700,700italic,200,200italic' rel='stylesheet' type='text/css'> -->
-<!-- Fonts Test -->
-
-<!-- Temporary test fix for the fonts. -->
-<link rel="stylesheet" href="/styles/fonts/fonts.css" type="text/css">
-<link rel="stylesheet" href="/styles/main.css" type="text/css" >
 <title>Case Western Reserve University</title>
-
-
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script defer src="/scripts/jquery.flexslider.js"></script>
-<script src="/scripts/modernizr.custom.42986.js"></script>
-       
-     <!--[if lt IE 9]>
-   <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-     <![endif]-->
-       
-     <!--[if lt IE 9]>
-   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!--[if IE]>
-    <style type="text/css">pre,code {padding-bottom:16px;overflow:visible;overflow-x:auto;overflow-y:hidden}</style>
-    <![endif]-->
-    
-    
-    
-    
+<!--#include file="/includes/headcontent.html" -->
 </head>
 
 <body>
-<!--#include virtual="/includes/global-header.html" -->
-<div class="container">
-<!--#include virtual="/includes/navigation.html" -->
+<!-- GLOBAL HEADER --> 
+<!--#include file="/includes/global-header.html" -->
+
+<div class="container bshack"> 
+<!-- NAVIGATION --> 
+<!--#include file="/includes/navigation.html" --> 
 <div class="content-sub">
 
 <section class="page-name">
@@ -185,13 +153,18 @@
 </div><!-- .content -->
 </div><!-- .container -->
 
-<!--#include file="/includes/footer.html" --> 
-<script type="text/javascript" src="/lib/bootstrap/js/bootstrap.js"></script>
-<script type="text/javascript" src="/scripts/jquery.dropmenu-1.1.4.js"></script>
-<script type="text/javascript" src="/scripts/jquery.sticky.js"></script>
-<script type="text/javascript" src="/scripts/menu.js"></script>
-<script type="text/javascript" src="/scripts/scripts.js"></script>     
+
+<!-- 2 FOOTER --> 
+<!--#include file="includes/footer.html" --> 
+
+<!-- This is only used for dev purposes eventually there will be a single compressed script --> 
+<!--#include file="/includes/scripts.html" -->
+</body>
+</html>
+
+
 <script type="text/javascript" > 
+//This can be removed in production of your webpage. it's simply a scroller for the left menu.
 $(function() {
 	//Added supplemment by bdm4 8/1/2014.. Previously the links in the menu would redirect. For this demo I will just scroll to the content clicked.
 	$('.sub-menu ul li a').click(function (e) {
