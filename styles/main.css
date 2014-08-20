@@ -5,6 +5,8 @@
  * Case Western Reserve University
  * (c) 2013
  *
+ * Branch 0.1 
+ * 8/18/2014
  */
 
 /* Reset */
@@ -13,7 +15,7 @@ html, body, address, footer, blockquote, dl, pre, span,  button, del, ins, map, 
 body {background: #f5f5f5; }
 
 /* HTML5 Boilerplate  */
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none; }
 [hidden] { display: none; }
@@ -98,7 +100,8 @@ header section {position:relative; margin:0 auto; width:88.2%; max-width:1232px;
 
 
 /* Containers */
-.container {background:#fff; position:relative; margin:0 auto; width:88.2%; max-width:1232px; }
+/* V0.1 modified added padding: 0, to override bootstraps padding */
+.container {background:#fff; position:relative; margin:0 auto; width:88.2%; max-width:1232px; padding: 0 !important }
 
 /*-webkit-box-shadow: 0 8px 6px -9px rgba(30,30,30,.5);
    -moz-box-shadow: 0 8px 6px -9px rgba(30,30,30,.5);
@@ -754,6 +757,14 @@ img { max-width: 100% !important; }
 @page { margin: 0.5cm; }
 p, h2, h3 { orphans: 3; widows: 3; }
 h2, h3 { page-break-after: avoid; }
+}
+
+/* Bootstrap 3.2 Hack, Introduced in branch 0.1
+	In bootstrap 3.2 the display is set to table which causes the title not to sit on the nav properly.
+	Note we don't have to add the obilgotary content: ""; that is handled in the bootstrap css.	
+*/
+.bshack:before {
+  	display: block;	
 }
 
 
