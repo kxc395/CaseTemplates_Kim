@@ -1,2 +1,0 @@
-Version 0.1 8/11/2014
-Clean up scripts.js. 
