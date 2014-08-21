@@ -5,8 +5,8 @@
  * Case Western Reserve University
  * (c) 2013
  *
- * Branch 0.1 
- * 8/18/2014
+ * Branch 0.2 
+ * 8/21/2014
  */
 
 /* Reset */
@@ -94,7 +94,19 @@ header section {position:relative; margin:0 auto; width:88.2%; max-width:1232px;
 	         transition: All 0.3s ease-in-out; }
 .cwru-links li a:hover {background-color:#eee; }
 
-#global-menu-toggle {position:absolute; right:0; text-align:center; top:15px;  cursor:pointer;  font-size:22px;  text-transform:lowercase; background:url(../images/cwru-links-list.png) no-repeat ; color:#ddd; background-position: -258px; padding:5px 15px 8px 50px; }
+#global-menu-toggle { 
+	position:absolute; 
+	right:0; 
+	text-align:center; 
+	top:15px;  
+	cursor:pointer;  
+	font-size:22px;  
+	text-transform:lowercase; 
+	background:url(../images/cwru-links-list.png) no-repeat; 
+	color:#ddd; 
+	background-position: -258px;
+	padding:5px 15px 8px 50px; 
+}
 
 #global-menu-toggle.active, header .header-2 #global-menu-toggle.active {background-position:20px; color:#333; background-color:rgba(255,255,255, 1); }
 
@@ -681,7 +693,7 @@ header .search {display:none; }
 .cwru-links li a {display:block; font-size:20px; padding:13px 20px;  color:#333; text-decoration:none; border-bottom:solid 1px rgba(153,153,153,.2); }
 .mobile-nav-toggle_smartphone {font-size:135%; }
 .m-search {position:relative; text-align:center; padding:7px 0;}
-.search-btn {right:7%; top:32.3%; }
+/*.search-btn {right:7%; top:32.3%; }*/
 .site-title { margin-left:auto; margin-right:auto;  left:0; right:0; text-align:center;  }
 .site-title a {font-size:90% !important; }
 
@@ -816,6 +828,7 @@ h2, h3 { page-break-after: avoid; }
 	.flex-control-nav {bottom: -40px; } /* modded in branch 0.2 was -30px and it was overlapping the border */
 }
 
+/* remove the border from flexslider */
 .flexslider{
 	background:none;
 	border:none;
