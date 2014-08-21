@@ -767,6 +767,61 @@ h2, h3 { page-break-after: avoid; }
   	display: block;	
 }
 
+/* Flexslider captions from old template
+.flex-caption { 
+	position:absolute; 
+	bottom:0; left:0; right:0;
+	
+	background-color:rgba(10,48,78, .9); 
+	*background-color:#0a304e;  
+	padding:20px; 
+	margin:0 !important; 
+	color:#fff; 
+	 font-size:30px; }
+	 */
+	 
+/* Flex slider fixes for branch 0.2 
+ 	You need the relative postion on the list elements
+*/
+	 
+
+.flexslider .slides li {
+    position:relative;
+}
+
+.flex-caption {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+	
+	padding: 20px;
+	margin:0 !important;
+	
+   	background-color:rgba(10,48,78, .9); 
+	*background-color:#0a304e; 
+	color:#fff;    
+    font-size:30px; /* consider changing the font size. if not here maybe in the media queries below. */
+	
+	z-index: 1;     
+}
+
+@media screen and (max-width: 650px) { 
+	.flex-direction-nav a {display:none; }
+	.flex-control-paging li a {width: 7px; height: 7px;}
+}
+
+@media screen and (max-width: 768px) {
+	.flex-caption { position:relative; bottom:0; background-color:#0a304e;  padding:10px;}
+	.flex-control-nav {bottom: -40px; } /* modded in branch 0.2 was -30px and it was overlapping the border */
+}
+
+.flexslider{
+	background:none;
+	border:none;
+	box-shadow:none;
+	margin:0px;
+}
 
 
 
