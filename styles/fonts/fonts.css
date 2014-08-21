@@ -8,9 +8,10 @@ Load order: chrome, ff & ie9+, legacy
  */
 @font-face {
     font-family: 'Titillium Web';
-    src: url('titillium-regular-webfont.svg#TitilliumRegular') format('svg'), 
-	 	 url('titillium-regular-webfont.woff') format('woff'),
-		 url('titillium-regular-webfont.eot'),
+	src: url('titillium-regular-webfont.eot'); /* ie678 */ 
+    src: url('titillium-regular-webfont.svg#TitilliumRegular') format('svg'), /*chrome 22-36*/
+	 	 url('titillium-regular-webfont.woff') format('woff'), /*everything else*/
+		 url('titillium-regular-webfont.eot') format('embedded-opentype'),
 		 url('titillium-regular-webfont.eot?#iefix') format('embedded-opentype'),
 		 url('titillium-regular-webfont.ttf') format('truetype');		 
     font-weight: normal;
